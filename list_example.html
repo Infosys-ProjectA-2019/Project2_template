@@ -58,25 +58,24 @@
 			</div>
     </section>
 
-		<!-- 繰り返し内容の部分をコメントアウト -->
-		<!--
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading bg-lightblue">紹介対象のなまえ
-        </h2>
-        <p class="lead">概要説明（施設や場所・授業→紹介文，料理など→価格）</p>
-      </div>
-      <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src="./photos/thumnail_sample_300.jpg" alt="画像の代替テキスト">
-      </div>
-    </div>
-		-->
-
     <!-- リスト表示のためコンポーネントをJavaScriptから挿入 -->
 		<!-- 他のコンポーネント→https://getbootstrap.com/docs/4.1/examples/ -->
 		<div id="list_content" class="m-3">
+      <!-- 繰り返し内容の部分を作成して表示が確認できたら，作成したHTMLを*_list.js内で作成するようにして，再びコメントアウト -->
+		  <!--
+     <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading bg-lightblue">紹介対象のなまえ
+          </h2>
+          <p class="lead">概要説明（施設や場所・授業→紹介文，料理など→価格）</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src="./photos/thumnail_sample_300.jpg" alt="画像の代替テキスト">
+       </div>
+      </div>
+		  -->
 		</div>
 
 		<hr>
@@ -86,15 +85,25 @@
    (C) All Right Reserved, 2015-2019, Project A 
   </footer>
 
-
-	<!-- Bootstrapを表示するためのJavaScriptライブラリ（jQueryは基本ライブラリなので他の部品でも利用できる）-->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- JavaScriptのライブラリ（jQueryは基本ライブラリ+Bootstrap用のJavaScriptファイル） -->
+	<script
+  	src="https://code.jquery.com/jquery-3.4.1.min.js"
+  	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  	crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
   <!-- jQueryを用いてオープンデータを読み取り，要素を追加する -->
+  <!-- オープンデータを利用しない場合は，以下の<script>～</script>をコメントアウトする -->
   <script src="js/readLinkDataJSON_list.js"></script>
-  <!-- <script src="js/readLocalJSON_list.js"></script><!-- ←ここのタグを追加 -->
+  <!-- 各グループで作成するJSONは必ず読み込むため，以下の<script>～</script>をコメントアウトしてはならない -->
+  <script src="js/readLocalJSON_list.js"></script>
 
 
 </body>
