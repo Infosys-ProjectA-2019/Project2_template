@@ -14,8 +14,8 @@ $(function(){
 
 		var url = "http://www.shonan.bunkyo.ac.jp/~学籍番号/各グループのリポジトリ名/data.json";
 
-		var q = $.urlParam('q'); //?q=検索語で指定されたとき
-		var category = $.urlParam('category'); //?category=カテゴリ名で指定されたとき
+		var q = decodeURIComponent($.urlParam('q')); //?q=検索語で指定されたとき
+		var category = decodeURIComponent$.urlParam('category')); //?category=カテゴリ名で指定されたとき
 		//qやcategoryなどでの検索する場合は，以下の表示HTML作成の処理にif文を追加する
 
 		$.getJSON(url,function(data){ //urlで読み出せるJSONデータ(data)の処理を行う
