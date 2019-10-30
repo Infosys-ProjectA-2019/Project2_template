@@ -19,12 +19,12 @@ $(function(){
 		//”その他のAPI”→RDF/JSONのURLをコピー＆貼り付けし，?callback=?を加える
 		//　例：var url = "http://linkdata.org/api/1/rdf1s2833i/fujisawa_shogakkou_rdf.json?callback=?";
 		var url = "http://linkdata.org/api/から始まるRDF/JSON形式のURL?callback=?";//←各チームの企画によって変更！
-		var resource_uri = "http://linkdata.org/resource/rdf1s2833i" //データIDにあたるURLの部分をここに書く
-		var label_uri ="http://www.w3.org/2000/01/rdf-schema#label" //ラベルとなっている項目のURI(変更の必要なし）
-		var addr_uri ="http://purl.org/jrrk#address" //住所の項目を取り出すためのURI
-		var phone_uri = "http://schema.org/telephone" //電話番号の項目を取り出すためのURI
-		var lat_uri = "http://www.w3.org/2003/01/geo/wgs84_pos#lat" //緯度の項目を取り出すためのURI
-		var lng_uri = "http://www.w3.org/2003/01/geo/wgs84_pos#long" //経度の項目を取り出すためのURI
+		var resource_uri = "http://linkdata.org/resource/rdf1s2833i"; //データIDにあたるURLの部分をここに書く
+		var label_uri ="http://www.w3.org/2000/01/rdf-schema#label"; //ラベルとなっている項目のURI(変更の必要なし）
+		var addr_uri ="http://purl.org/jrrk#address"; //住所の項目を取り出すためのURI
+		var phone_uri = "http://schema.org/telephone"; //電話番号の項目を取り出すためのURI
+		var lat_uri = "http://www.w3.org/2003/01/geo/wgs84_pos#lat"; //緯度の項目を取り出すためのURI
+		var lng_uri = "http://www.w3.org/2003/01/geo/wgs84_pos#long"; //経度の項目を取り出すためのURI
 
 		$.getJSON(url,function(data){ //urlの文字列のURLからidまたはqで指定した値を持つJSONオブジェクトを取得
 
