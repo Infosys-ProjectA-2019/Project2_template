@@ -25,6 +25,7 @@ $(function(){
 		var phone_uri = "http://schema.org/telephone"; //電話番号の項目を取り出すためのURI
 		var lat_uri = "http://www.w3.org/2003/01/geo/wgs84_pos#lat"; //緯度の項目を取り出すためのURI
 		var lng_uri = "http://www.w3.org/2003/01/geo/wgs84_pos#long"; //経度の項目を取り出すためのURI
+		//各データに従って取り出す項目のURIを追加・削除する
 
 		$.getJSON(url,function(data){ //urlで読み出せるJSONデータ(data)の処理を行う
 			var num=1; //項目の数を数える（独自のJSONは0から始まるので，データを作成，あるいは取り出す際注意！）
@@ -36,7 +37,7 @@ $(function(){
 				var address = instance[addr_uri][0].value
 				var region = instance[label_uri][2].value
 				var phone_number = instance[phone_uri][0].value
-				//var image_url = instance[].[0].value//オープンデータに画像が含まれる場合などに値を読み取る
+				//var image_url = instance[image_uri][0].value//オープンデータに画像が含まれる場合などに値を読み取る
 				
 				//表示用のHTMLを生成
 				var item_html='<hr class="featurette-divider">';
