@@ -28,7 +28,7 @@ $(function(){
 				item_html += '<h2 class="featurette-heading bg-lightblue">';
 				item_html += '<a href="./detail.html?id='+elem.id+'">';
 				item_html += elem.title; //紹介対象のなまえ
-        item_html += '</a></h2>';
+				item_html += '</a></h2>';
 				item_html += '<p class="lead">';
 				item_html += elem.abstract; //概要説明（施設や場所・授業→紹介文，料理など→価格）</p>
 				item_html += '</div>';
