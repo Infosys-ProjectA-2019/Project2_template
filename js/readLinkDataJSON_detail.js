@@ -13,7 +13,7 @@ $(function(){
 		}
 
 		var id = 0; //URLに?id=番号を付けて読み込む
-		id = $.urlParam('id'); //?id=Nで指定されたとき
+		id = parseInt($.urlParam('id')); //?id=Nで指定されたとき
 
 		//LinkData.orgからJSON(P)を取得するURLは，各データセットの”その他の形式のAPIリストを表示”から
 		//”その他のAPI”→RDF/JSONのURLをコピー＆貼り付けし，?callback=?を加える
@@ -43,7 +43,7 @@ $(function(){
 			detail += '電話番号：'+phone_number+'<br />';
 			var lat = instance[lat_uri][0].value //【注意】urlに入っている「藤沢市小学校一覧」では間違った値が入っている
 			var lng = instance[lng_uri][0].value //【注意】urlに入っている「藤沢市小学校一覧」では間違った値が入っている
-			//var image_url = instance[].[0].value//オープンデータに画像が含まれる場合などに値を読み取る
+			//var image_url = instance[][0].value//オープンデータに画像が含まれる場合などに値を読み取る
 
 			if($("main").get(0)){ //<main>～</main>があったら
 
@@ -123,7 +123,7 @@ $(function(){
 
 		})
 		.fail(function(jqXHR, textStatus, errorThrown) { //urlにアクセスできなかった時のエラー処理
-    	alert("エラー：" + textStatus+"\n以下のURLにアクセスできませんでした．readLinkDataJSON_detail.jsの中のurlの値を変更してください．"+url);
+			alert("エラー：" + textStatus+"\n以下のURLにアクセスできませんでした．readLinkDataJSON_detail.jsの中のurlの値を変更してください．"+url);
 		});
 	});
 });
